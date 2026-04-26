@@ -113,7 +113,7 @@ st.plotly_chart(fig_map, use_container_width=True)
 
 # Row 3 - Data table
 st.subheader("📋 Raw Data Table")
-st.table(df_filtered.sort_values(['Year', 'Country']).head(50))
+st.markdown(df_filtered.sort_values(['Year', 'Country']).head(50).to_html(index=False), unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
